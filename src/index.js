@@ -34,7 +34,7 @@ const loginOrUseExistingSession = async (page) => {
       console.log("Successfully logged in using existing cookies.");
     }
     else {
-      throw new Error('Ate a bad cookie.');;
+      throw new Error('Ate a bad cookie.');
     }
   } catch (error) {
     console.log("Could not find existing cookies from storage.");
@@ -72,6 +72,8 @@ const main = async () => {
   const page = await getNewPage(browser);
   await loginOrUseExistingSession(page);
   await listTemps(page);
+
+  await page.waitFor(500); // TODO: We should wait for the sparklines to appear in the dom and capture the svg
 
   await page.screenshot({path: 'test.png'});
   await browser.close();
