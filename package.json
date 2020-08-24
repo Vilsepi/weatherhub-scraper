@@ -1,0 +1,19 @@
+{
+  "name": "weatherhub-scraper",
+  "version": "1.0.0",
+  "description": "Scrapes sensor data from WeatherHub Observer website",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Vilsepi/weatherhub-scraper.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint ."
+  },
+  "author": "Ville Seppanen",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "puppeteer": "^5.2.1"
+  }
+}
